@@ -3334,6 +3334,9 @@ hr {
     margin-bottom: 20px;
   }
 }
+.hero h1 {
+  text-transform: uppercase;
+}
 @media (max-width: 767px) {
   .hero h1, .hero .sub-heading {
     margin-bottom: 26px;
