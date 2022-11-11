@@ -622,6 +622,9 @@ hr {
             @include media('<=phone') {
                 margin-bottom: 19px;
             }
+            span {
+                display: block;
+            }
         }
     }
 }

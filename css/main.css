@@ -3843,6 +3843,9 @@ hr {
     margin-bottom: 19px;
   }
 }
+.gallery-holder .caption-holder h3 span {
+  display: block;
+}
 
 .gallery-holder {
   position: relative;
