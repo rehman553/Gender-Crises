@@ -3537,7 +3537,7 @@ hr {
   margin-bottom: 24px;
   width: 100%;
   padding: 0 12px;
-  min-height: 108px;
+  min-height: 102px;
 }
 @media (min-width: 767px) {
   .gallery-holder .post {
@@ -3730,7 +3730,7 @@ hr {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: auto;
   left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3742,6 +3742,7 @@ hr {
   transition: -webkit-transform 0s ease;
   transition: transform 0s ease;
   transition: transform 0s ease, -webkit-transform 0s ease;
+  height: 327px;
 }
 .gallery-holder .img-opener.close img {
   width: 45px;
