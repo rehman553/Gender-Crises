@@ -28,6 +28,14 @@ jQuery(document).ready(function () {
     });
 });
 
+// number order
+jQuery(document).ready(function () {
+
+    var num = 0;
+    $('.gallery .post').each(function(){
+        num++;
+    });
+});
 
 // navigation accesibility module
 function TouchNav(opt) {

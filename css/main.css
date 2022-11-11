@@ -3436,7 +3436,7 @@ hr {
 }
 @media (min-width: 1500px) {
   .count {
-    right: -44px;
+    right: -40px;
   }
 }
 .count img {
@@ -3445,6 +3445,10 @@ hr {
   display: none !important;
 }
 
+.gallery-holder .post:first-child .count {
+  width: 100px;
+  height: 110px;
+}
 .gallery-holder .post:first-child .count:after {
   background-image: url(../images/01.png);
 }
@@ -3482,8 +3486,8 @@ hr {
   background-image: url(../images/12.png);
 }
 .gallery-holder .post:nth-child(13) .count {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 110px;
 }
 .gallery-holder .post:nth-child(13) .count:after {
   background-image: url(../images/13.png);
@@ -3688,6 +3692,9 @@ hr {
     margin-bottom: 15px;
   }
 }
+.gallery-holder .card.post-active {
+  z-index: 9;
+}
 .gallery-holder .card.post-active .caption-holder {
   max-height: 4000px;
   -webkit-transition: all 0.7s ease;
@@ -3717,9 +3724,33 @@ hr {
   opacity: 1;
   -webkit-transform: scale(0);
           transform: scale(0);
+  width: auto;
+  height: auto;
+  padding: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transition: -webkit-transform 0s ease;
+  transition: -webkit-transform 0s ease;
+  transition: transform 0s ease;
+  transition: transform 0s ease, -webkit-transform 0s ease;
+}
+.gallery-holder .img-opener.close img {
   width: 45px;
-  height: 44px;
-  margin: 16px;
+  height: 45px;
+  position: absolute;
+  top: 16px;
+  right: auto;
+  bottom: auto;
+  left: 16px;
 }
 .gallery-holder .img-opener {
   overflow: hidden;
@@ -3809,6 +3840,30 @@ hr {
 @media (max-width: 767px) {
   .gallery-holder .caption-holder h3 {
     margin-bottom: 19px;
+  }
+}
+
+.gallery-holder {
+  position: relative;
+}
+
+.lottie-animate {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 9;
+  position: absolute;
+  left: 50%;
+  min-width: 300px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 17px;
+  pointer-events: none;
+}
+@media (min-width: 767px) {
+  .lottie-animate {
+    display: none;
   }
 }
 
@@ -3903,7 +3958,6 @@ hr {
 @media (max-width: 767px) {
   .join-holder {
     padding-top: 79px;
-    margin-bottom: 50px;
     text-align: center;
     background: #FDDDB5;
   }

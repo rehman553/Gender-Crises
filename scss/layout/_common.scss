@@ -172,7 +172,7 @@ hr {
     margin-left: auto;
 
     @include media('>=widescreen') {
-        right: -44px;
+        right: -40px;
     }
 
     img {
@@ -185,6 +185,7 @@ hr {
     .post {
         &:first-child {
             .count {
+                @include size(100px, 110px);
                 &:after {
                     background-image: url(../images/01.png);
                 }
@@ -281,7 +282,7 @@ hr {
         
         &:nth-child(13) {
             .count {
-                 @include size(90px, 90px);
+                @include size(80px, 110px);
                 &:after {
                     background-image: url(../images/13.png);
                 }
@@ -503,6 +504,7 @@ hr {
 
     .card {
         &.post-active {
+            z-index: 9;
             .caption-holder {
                 max-height: 4000px;
                 transition: all 0.7s ease;
@@ -536,8 +538,16 @@ hr {
             z-index: 99;
             opacity: 1;
             transform: scale(0);
-            @include size(45px, 44px);
-            margin: 16px;
+            @include size(auto, auto);
+            padding: 16px;
+            @include position(0,0,0,0);
+            display: flex;
+            align-items: flex-start;
+            transition:transform  0s ease;
+            img {
+                @include size(45px, 45px);
+                @include position(16px, auto, auto, 16px);
+            }
         }
     }
 
@@ -612,6 +622,27 @@ hr {
                 margin-bottom: 19px;
             }
         }
+    }
+}
+
+.gallery-holder {
+    position: relative;
+}
+
+.lottie-animate {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 9;
+    position: absolute;
+    left: 50%;
+    min-width: 300px;
+    transform: translateX(-50%);
+    top: 17px;
+    pointer-events: none;
+    @include media('>=phone') {
+        display: none;
     }
 }
 
@@ -701,7 +732,6 @@ hr {
 
     @include media('<=phone') {
         padding-top: 79px;
-        margin-bottom: 50px;
         text-align: center;
         background: $lightapricot;
 
