@@ -3649,7 +3649,6 @@ hr {
   text-transform: uppercase;
   letter-spacing: 0.385em;
   color: #fff;
-  word-break: break-all;
 }
 .gallery-holder .img-holder {
   z-index: -1;
